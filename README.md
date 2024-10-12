@@ -12,10 +12,10 @@ The goal of this project is to develop a React application that consumes the [St
 
 ## Technologies Used
 
-**React/React Native:** For building the user interface.
-**Axios:** To make HTTP requests to the API.
-**React Router:** For navigation between the book list and the details page.
-**CSS/TAILWINDCSS:** For application styling.
+- **React/React Native:** For building the user interface.
+- **Axios:** To make HTTP requests to the API.
+- **React Router:** For navigation between the book list and the details page.
+- **CSS/TAILWINDCSS:** For application styling.
 
 
 
