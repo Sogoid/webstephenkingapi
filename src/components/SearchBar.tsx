@@ -1,5 +1,5 @@
 import React from 'react';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface SearchBarProps {
     isSearchFocused: boolean;
@@ -19,23 +19,25 @@ const SearchBar: React.FC<SearchBarProps> = ({
                                                  setSearchType
                                              }) => {
     return (
-        <div className="flex flex-col justify-center items-center mt-8">
+        <div className="flex flex-col justify-center items-center mt-6 relative">
             <motion.div
-                animate={{scale: isSearchFocused || searchValue ? 1 : 0}}
-                className={`font-custom transition-transform duration-300 text-gray-700 ${isSearchFocused || searchValue ? 'mb-0' : 'mb-0'}`}
+                animate={{ scale: isSearchFocused || searchValue ? 1 : 0 }}
+                className={`font-custom transition-transform duration-300 text-gray-700 absolute left-[25.5rem] ${
+                    isSearchFocused || searchValue ? '-top-4 uppercase bg-white z-10 rounded-xl p-1' : ' transform'
+                }`}
             >
                 Search...
             </motion.div>
-            <div className="flex space-x-2"> {/* Container flexível para input e select */}
+            <div className="flex space-x-2 relative">
                 <input
                     className={`w-96 border-2 rounded-md p-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 ${
                         isSearchFocused || searchValue ? 'border-indigo-600' : 'border-gray-300'
-                    }`}
+                    } placeholder:font-custom placeholder:uppercase focus:placeholder-transparent`}
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}
                     onFocus={() => setIsSearchFocused(true)}
                     onBlur={() => setIsSearchFocused(false)}
-                    placeholder="Digite sua pesquisa"
+                    placeholder="Search..."
                 />
                 <select
                     value={searchType}

@@ -1,3 +1,5 @@
-.font-custom {
-    font-family: 'WendyOne', sans-serif; /* Use a fonte aqui */
+@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+
+* {
+    font-family: 'WendyOne-Regular', sans-serif;
 }

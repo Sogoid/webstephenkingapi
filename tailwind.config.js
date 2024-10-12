@@ -7,10 +7,21 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                custom: ['WendyOne-Regular', 'sans-serif'],
+                custom: ['Wendy One', 'sans-serif'],
             },
         },
     },
-    plugins: [],
-};
-
+    plugins: [
+        function ({addUtilities}) {
+            const newUtilities = {
+                '.placeholder-custom': {
+                    '&::placeholder': {
+                        fontFamily: 'Wendy One',
+                        textTransform: 'uppercase',
+                    }
+                }
+            }
+            addUtilities(newUtilities, ['responsive', 'hover'])
+        }
+    ],
+}
