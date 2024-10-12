@@ -1,50 +1,32 @@
-# React + TypeScript + Vite
+# Stephen King Collection Academic Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The goal of this project is to develop a React application that consumes the [Stephen King API](https://stephen-king-api.onrender.com/), allowing users to view a list of books written by Stephen King and access details about each of them. The application will have a simple and intuitive interface, with features to list books and display detailed information when clicking on a title.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Features
+**Book Listing:** The application will make a request to the API to obtain a list of available books. The data will be displayed in a list, showing the title of each book.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Book Details:** When clicking on a book title, the user will be redirected to a details page, where additional information such as synopsis, year of publication and genre will be displayed.
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+**React/React Native:** For building the user interface.
+**Axios:** To make HTTP requests to the API.
+**React Router:** For navigation between the book list and the details page.
+**CSS/TAILWINDCSS:** For application styling.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Run Locally
+
+- Clone the repo
+- `npm i && npm run dev`
+
+## Feature: Mobile 2 Development
+
+Students:
+- **Diogo da Silveira Ribeiro** - Matricula: 029998000ADS000076
+- **Amanda Queiroz** - Matricula:
+
