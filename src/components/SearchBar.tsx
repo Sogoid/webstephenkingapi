@@ -45,12 +45,16 @@ const SearchBar: React.FC<SearchBarProps> = ({
         <select
           title="SearchOption"
           value={searchType}
-          className="border-2 rounded-md p-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 border-gray-300"
+          className="border-2 rounded-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 border-gray-300 font-custom text-center"
           onChange={(e) =>
             setSearchType(e.target.value as "title" | "publisher")
           }>
-          <option value="title">TITULO</option>
-          <option value="publisher">EDITORA</option>
+          <option value="title" className="font-custom">
+            TITULO
+          </option>
+          <option value="publisher" className="font-custom">
+            EDITORA
+          </option>
         </select>
       </div>
     </div>
