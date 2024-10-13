@@ -22,7 +22,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
     <div className="flex flex-col justify-center items-center mt-6 relative">
       <motion.div
         animate={{ scale: isSearchFocused || searchValue ? 1 : 0 }}
-        className={`font-custom transition-transform duration-300 text-gray-700 absolute left-[25.5rem] ${
+        className={`font-custom transition-transform duration-300 text-gray-700 absolute sm:left-[25.5rem] lg:left-[43rem] ${
           isSearchFocused || searchValue
             ? "-top-4 uppercase bg-white z-10 rounded-xl p-1"
             : " transform"
