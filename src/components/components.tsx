@@ -6,5 +6,3 @@ export const ActivityIndicator: React.FC<{ size: string; color: string }> = ({si
         <span className="spinner">Loading...</span>
     </div>
 );
-
-// Defina outros componentes como `Animated` e `Easing` aqui, se necessário.

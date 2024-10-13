@@ -1,5 +1,6 @@
 import React from "react";
-import { Daum } from "../models/book"; // Assuming Daum contains the id field
+import { Daum } from "../models/book";
+import { ActivityIndicator } from "./ActivityIndicator";
 import BookCard from "./BookCard";
 
 interface BookListProps {
@@ -11,7 +12,12 @@ const BookList: React.FC<BookListProps> = ({ books, loading }) => {
   return (
     <div className="flex flex-col items-center">
       {loading ? (
-        <p>Loading...</p>
+        <div className="flex flex-row items-center mt-2">
+          <span className="text-black font-bold uppercase italic mr-2">
+            Loading...
+          </span>
+          <ActivityIndicator size="40px" color="red" />
+        </div>
       ) : books.length === 0 ? (
         <p className="text-red-500">Nenhum livro encontrado</p>
       ) : (

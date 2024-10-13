@@ -8,7 +8,7 @@ const Splash: React.FC = () => {
 
     useEffect(() => {
         const timer = setTimeout(async () => {
-            navigate('/login'); // Navegar para a tela de login
+            navigate('/login');
         }, 2000);
 
         return () => clearTimeout(timer);

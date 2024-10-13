@@ -8,7 +8,7 @@ interface BookCardProps {
   publisher: string;
   isbn: string;
   pages: number;
-  id: number; // Ensure id is defined here
+  id: number;
 }
 
 const BookCard: React.FC<BookCardProps> = ({
@@ -22,11 +22,9 @@ const BookCard: React.FC<BookCardProps> = ({
   const [bookDetails, setBookDetails] = useState<BookDetail | null>(null);
 
   const handleInfoClick = async () => {
-    console.log("ID passed to handleInfoClick: ", id); // Debug log for id
-    console.log("Fetching book details...");
     try {
       const details = await fetchBookDetails(id);
-      console.log("Book details fetched: ", details);
+
       setBookDetails(details);
       setIsModalOpen(true);
     } catch (error) {
@@ -34,10 +32,7 @@ const BookCard: React.FC<BookCardProps> = ({
     }
   };
 
-  useEffect(() => {
-    console.log("Modal open state changed: ", isModalOpen);
-    console.log("Book details state updated: ", bookDetails);
-  }, [isModalOpen, bookDetails]);
+  useEffect(() => {}, [isModalOpen, bookDetails]);
 
   return (
     <div className="flex flex-col justify-between bg-zinc-300 rounded-3xl hover:shadow-2xl hover:shadow-black shadow- p-8 border-2 border-zinc-900 gap-6 w-72 h-96">
