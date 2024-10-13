@@ -10,23 +10,24 @@ export const ActivityIndicator: React.FC<ActivityIndicatorProps> = ({
   color,
 }) => {
   return (
-    <div
-      style={{
-        width: size,
-        height: size,
-        border: `5px solid ${color}`,
-        borderTop: "5px solid transparent",
-        borderRadius: "50%",
-        animation: "spin 1s linear infinite",
-      }}>
+    <div>
+      <div
+        className="border-4 border-t-transparent rounded-full animate-spin"
+        style={{
+          width: size,
+          height: size,
+          borderColor: `${color} transparent transparent transparent`,
+        }}></div>
       <style>
         {`
-                @keyframes spin {
-                    0% { transform: rotate(0deg); }
-                    100% { transform: rotate(360deg); }
-                }
-                `}
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}
       </style>
     </div>
   );
 };
+
+export default ActivityIndicator;
