@@ -1,21 +1,34 @@
 export interface Root {
-    data: Daum[];
+  data: Daum[];
 }
 
 export interface Daum {
-    id: number;
-    Year: number;
-    Title: string;
-    handle: string;
-    Publisher: string;
-    ISBN: string;
-    Pages: number;
-    Notes: string[];
-    created_at: string;
-    villains: Villain[];
+  id: number;
+  Year: number;
+  Title: string;
+  handle: string;
+  Publisher: string;
+  ISBN: string;
+  Pages: number;
+  Notes: string[];
+  created_at: string;
+  villains: Villain[];
 }
 
 export interface Villain {
-    name: string;
-    url: string;
+  name: string;
+  url: string;
+}
+
+export interface BookDetail {
+  id: number;
+  Year: number;
+  Title: string;
+  handle: string;
+  Publisher: string;
+  ISBN: string;
+  Pages: number;
+  Notes: string[];
+  created_at: string;
+  villains: Villain[];
 }
